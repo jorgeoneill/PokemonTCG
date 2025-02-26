@@ -1,0 +1,168 @@
+[
+    {
+        "id": "exu-!",
+        "localId": "!",
+        "name": "Unown"
+    },
+    {
+        "id": "exu-%3F",
+        "localId": "%3F",
+        "name": "Unown"
+    },
+    {
+        "id": "pl1-1",
+        "localId": "1",
+        "name": "Ampharos",
+        "image": "https://assets.tcgdex.net/en/pl/pl1/1"
+    },
+    {
+        "id": "ru1-1",
+        "localId": "1",
+        "name": "Venusaur",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/1"
+    },
+    {
+        "id": "pl4-1",
+        "localId": "1",
+        "name": "Charizard",
+        "image": "https://assets.tcgdex.net/en/pl/pl4/1"
+    },
+    {
+        "id": "pl2-1",
+        "localId": "1",
+        "name": "Arcanine",
+        "image": "https://assets.tcgdex.net/en/pl/pl2/1"
+    },
+    {
+        "id": "pl3-1",
+        "localId": "1",
+        "name": "Absol G",
+        "image": "https://assets.tcgdex.net/en/pl/pl3/1"
+    },
+    {
+        "id": "dp1-1",
+        "localId": "1",
+        "name": "Dialga",
+        "image": "https://assets.tcgdex.net/en/dp/dp1/1"
+    },
+    {
+        "id": "xy2-1",
+        "localId": "1",
+        "name": "Caterpie",
+        "image": "https://assets.tcgdex.net/en/xy/xy2/1"
+    },
+    {
+        "id": "xy12-1",
+        "localId": "1",
+        "name": "Venusaur EX",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/1"
+    },
+    {
+        "id": "dp6-1",
+        "localId": "1",
+        "name": "Deoxys Normal Forme",
+        "image": "https://assets.tcgdex.net/en/dp/dp6/1"
+    },
+    {
+        "id": "dp5-1",
+        "localId": "1",
+        "name": "Articuno",
+        "image": "https://assets.tcgdex.net/en/dp/dp5/1"
+    },
+    {
+        "id": "dp2-1",
+        "localId": "1",
+        "name": "Aggron",
+        "image": "https://assets.tcgdex.net/en/dp/dp2/1"
+    },
+    {
+        "id": "dp4-1",
+        "localId": "1",
+        "name": "Blaziken",
+        "image": "https://assets.tcgdex.net/en/dp/dp4/1"
+    },
+    {
+        "id": "dp7-1",
+        "localId": "1",
+        "name": "Dusknoir",
+        "image": "https://assets.tcgdex.net/en/dp/dp7/1"
+    },
+    {
+        "id": "xy0-1",
+        "localId": "1",
+        "name": "Weedle",
+        "image": "https://assets.tcgdex.net/en/xy/xy0/1"
+    },
+    {
+        "id": "dp3-1",
+        "localId": "1",
+        "name": "Ampharos",
+        "image": "https://assets.tcgdex.net/en/dp/dp3/1"
+    },
+    {
+        "id": "xy10-1",
+        "localId": "1",
+        "name": "Shuckle",
+        "image": "https://assets.tcgdex.net/en/xy/xy10/1"
+    },
+    {
+        "id": "g1-1",
+        "localId": "1",
+        "name": "Venusaur EX",
+        "image": "https://assets.tcgdex.net/en/xy/g1/1"
+    },
+    {
+        "id": "xy5-1",
+        "localId": "1",
+        "name": "Weedle",
+        "image": "https://assets.tcgdex.net/en/xy/xy5/1"
+    },
+    {
+        "id": "xy7-1",
+        "localId": "1",
+        "name": "Oddish",
+        "image": "https://assets.tcgdex.net/en/xy/xy7/1"
+    },
+    {
+        "id": "xy11-1",
+        "localId": "1",
+        "name": "Tangela",
+        "image": "https://assets.tcgdex.net/en/xy/xy11/1"
+    },
+    {
+        "id": "dc1-1",
+        "localId": "1",
+        "name": "Team Magma's Numel",
+        "image": "https://assets.tcgdex.net/en/xy/dc1/1"
+    },
+    {
+        "id": "xy6-1",
+        "localId": "1",
+        "name": "Exeggcute",
+        "image": "https://assets.tcgdex.net/en/xy/xy6/1"
+    },
+    {
+        "id": "xy9-1",
+        "localId": "1",
+        "name": "Chikorita",
+        "image": "https://assets.tcgdex.net/en/xy/xy9/1"
+    },
+    {
+        "id": "xy3-1",
+        "localId": "1",
+        "name": "Bellsprout",
+        "image": "https://assets.tcgdex.net/en/xy/xy3/1"
+    },
+    {
+        "id": "xy8-1",
+        "localId": "1",
+        "name": "Paras",
+        "image": "https://assets.tcgdex.net/en/xy/xy8/1"
+    },
+    {
+        "id": "xy4-1",
+        "localId": "1",
+        "name": "Venonat",
+        "image": "https://assets.tcgdex.net/en/xy/xy4/1"
+    }
+]
