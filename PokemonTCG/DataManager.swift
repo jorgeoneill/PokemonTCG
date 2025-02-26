@@ -14,28 +14,28 @@ enum DataManager {
     enum NetworkData {
         // MARK: public methods
         
-        static func getCards() async throws -> [Card] {
+        static func getCardItems() async throws -> [CardListItem] {
             // Step 1: Load cached data first (for instant UI update)
-            if let cachedCards = LocalData.loadCards() {
-                print("[DataManager] \(cachedCards.count) cards retrieved from cache.")
+            if let cachedItems = LocalData.loadCardItems() {
+                print("[DataManager] \(cachedItems.count) card items retrieved from cache.")
                 
                 // Fetch fresh data in the background and save it in cache
                 Task {
                     do {
-                        let freshCards = try await fetchCards()
-                        LocalData.cache(cards: freshCards)
+                        let freshItems = try await fetchCardItems()
+                        LocalData.cache(cardItems: freshItems)
                     } catch {
-                        print("[DataManager] Failed to refresh cards: \(error).")
+                        print("[DataManager] Failed to refresh card items: \(error).")
                     }
                 }
                 
-                return cachedCards
+                return cachedItems
             }
             
             // Step 2: If no cache, fetch fresh data immediately
-            let freshCards = try await fetchCards()
-            LocalData.cache(cards: freshCards)
-            return freshCards
+            let freshItems = try await fetchCardItems()
+            LocalData.cache(cardItems: freshItems)
+            return freshItems
         }
         
         static func getImage(from url: URL?) async throws -> UIImage {
@@ -61,7 +61,7 @@ enum DataManager {
         }
         
         // MARK: private methods
-        private static func fetchCards() async throws -> [Card] {
+        private static func fetchCardItems() async throws -> [CardListItem] {
             guard let url = endpoint() else {
                 throw NetworkError.invalidURL
             }
@@ -75,13 +75,13 @@ enum DataManager {
                 throw NetworkError.invalidServerResponse
             }
             
-            let cards: [Card] = try JSONDecoder().decode(
-                [Card].self,
+            let cardItems: [CardListItem] = try JSONDecoder().decode(
+                [CardListItem].self,
                 from: data
             )
             
-            print("[DataManager] \(cards.count) cards retrieved from network.")
-            return cards
+            print("[DataManager] \(cardItems.count) card items retrieved from network.")
+            return cardItems
         }
         
         static func fetchImage(from url: URL?) async throws -> UIImage {
@@ -120,17 +120,17 @@ enum DataManager {
     
     
     enum LocalData {
-        // Load cached cards
-        static func loadCards() -> [Card]? {
-            guard let data = UserDefaults.standard.data(forKey: Constants.UserDefaultsKeys.cachedCards) else { return nil }
-            return try? JSONDecoder().decode([Card].self, from: data)
+        // Load cached card items
+        static func loadCardItems() -> [CardListItem]? {
+            guard let data = UserDefaults.standard.data(forKey: Constants.UserDefaultsKeys.cachedCardItems) else { return nil }
+            return try? JSONDecoder().decode([CardListItem].self, from: data)
         }
         
-        // Save cards to cache
-        static func cache(cards: [Card]) {
-            if let data = try? JSONEncoder().encode(cards) {
-                UserDefaults.standard.setValue(data, forKey: Constants.UserDefaultsKeys.cachedCards)
-                print("[DataManager] \(cards.count) cards cached.")
+        // Save card items to cache
+        static func cache(cardItems: [CardListItem]) {
+            if let data = try? JSONEncoder().encode(cardItems) {
+                UserDefaults.standard.setValue(data, forKey: Constants.UserDefaultsKeys.cachedCardItems)
+                print("[DataManager] \(cardItems.count) card items cached.")
             }
         }
         
@@ -139,26 +139,26 @@ enum DataManager {
             imageCache.removeAllObjects()
         }
         
-        // Helper function to clear cards cache if necessary
+        // Helper function to clear card items cache if necessary
         static func clearCardsCache() {
-            UserDefaults.standard.removeObject(forKey: Constants.UserDefaultsKeys.cachedCards)
+            UserDefaults.standard.removeObject(forKey: Constants.UserDefaultsKeys.cachedCardItems)
             UserDefaults.standard.synchronize()
         }
         
         // Mocked data
-        static func getMockedCards() async throws -> [Card] {
-            guard let url = Bundle.main.url(forResource: "cards", withExtension: "json"
+        static func getMockedCardItems() async throws -> [CardListItem] {
+            guard let url = Bundle.main.url(forResource: "card_items", withExtension: "json"
             ) else {
                 throw NetworkError.invalidURL
             }
             
             let data = try Data(contentsOf: url)
-            let cards: [Card] = try JSONDecoder().decode(
-                [Card].self,
+            let items: [CardListItem] = try JSONDecoder().decode(
+                [CardListItem].self,
                 from: data
             )
-            print("[DataManager] \(cards.count) cards retrieved from mocked API.")
-            return cards
+            print("[DataManager] \(items.count) card items retrieved from mocked API.")
+            return items
         }
     }
 }

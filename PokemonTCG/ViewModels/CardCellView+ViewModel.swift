@@ -10,10 +10,10 @@ import UIKit
 extension CardCellView {
     final class ViewModel {
         // MARK: - Private properties
-        private let card: Card
-        private var cardImage: UIImage?
+        private let item: CardListItem
+        private var itemImage: UIImage?
         private var imageURL: URL? {
-            guard let imageBaseURLString = card.imageBaseURLString else {
+            guard let imageBaseURLString = item.imageBaseURLString else {
                 return nil
             }
             let imageBaseURL = URL(string: imageBaseURLString)
@@ -24,7 +24,7 @@ extension CardCellView {
         
         // MARK: - Public properties
         var cellTitle: String {
-            card.name
+            item.name
         }
         var cornerRadius: CGFloat {
             Constants.UI.cardCellCornerRadius
@@ -40,8 +40,8 @@ extension CardCellView {
         }
         
         // MARK: - Lifecycle
-        init(card: Card) {
-            self.card = card
+        init(item: CardListItem) {
+            self.item = item
         }
         
         // MARK: - Public methods
@@ -51,8 +51,8 @@ extension CardCellView {
             }
             
             do {
-                cardImage = try await DataManager.NetworkData.getImage(from: url)
-                return cardImage
+                itemImage = try await DataManager.NetworkData.getImage(from: url)
+                return itemImage
             } catch {
                 print("[CardCellView.ViewModel] Failed to fetch image: \(error).")
                 return nil

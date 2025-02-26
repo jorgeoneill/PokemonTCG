@@ -44,7 +44,7 @@ class MainViewController: UIViewController {
     private func loadDataTask() {
         Task {
             do {
-                try await mainViewModel.getCards()
+                try await mainViewModel.getCardItems()
             } catch {
                 self.displayError(
                     alertTitle: String(localized: "data_unavailable_error_title"),

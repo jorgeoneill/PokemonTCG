@@ -80,7 +80,7 @@ final class MainView: UIView {
     
     private func updateView() {
         tableView.reloadData()
-        let hasItems = viewModel.numberOfCards > 0
+        let hasItems = viewModel.numberOfItems > 0
         tableView.isHidden = !hasItems
         emptyListLabel.isHidden = hasItems
     }
@@ -89,7 +89,7 @@ final class MainView: UIView {
 // MARK: - Table view data source methods
 extension MainView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.numberOfCards
+        viewModel.numberOfItems
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CardCellView.identifier, for: indexPath) as? CardCellView else {
@@ -112,7 +112,7 @@ extension MainView: UITableViewDelegate {
 // MARK: Search bar delegate methods
 extension MainView: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        viewModel.searchCards(with: searchText)
+        viewModel.searchItems(with: searchText)
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder() // Dismiss keyboard

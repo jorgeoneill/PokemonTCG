@@ -37,7 +37,7 @@ enum Constants {
     }
     
     enum UserDefaultsKeys {
-        static let cachedCards = "cachedCards"
+        static let cachedCardItems = "cachedCardItems"
     }
 }
 
