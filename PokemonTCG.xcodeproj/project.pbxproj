@@ -53,11 +53,6 @@
 			path = PokemonTCGTests;
 			sourceTree = "<group>";
 		};
-		F5191F742D6BC3D900195F65 /* PokemonTCGUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PokemonTCGUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +85,6 @@
 			children = (
 				F5191F532D6BC3D800195F65 /* PokemonTCG */,
 				F5191F6A2D6BC3D900195F65 /* PokemonTCGTests */,
-				F5191F742D6BC3D900195F65 /* PokemonTCGUITests */,
 				F5191F522D6BC3D800195F65 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -165,9 +159,6 @@
 			);
 			dependencies = (
 				F5191F732D6BC3D900195F65 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				F5191F742D6BC3D900195F65 /* PokemonTCGUITests */,
 			);
 			name = PokemonTCGUITests;
 			packageProductDependencies = (

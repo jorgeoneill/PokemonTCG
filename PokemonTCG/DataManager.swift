@@ -161,7 +161,7 @@ enum DataManager {
         
         // Mocked data
         static func getMockedCardItems() async throws -> [CardListItem] {
-            guard let url = Bundle.main.url(forResource: "card_items", withExtension: "json"
+            guard let url = Bundle.main.url(forResource: "card_items_small", withExtension: "json"
             ) else {
                 throw NetworkError.invalidURL
             }
@@ -173,6 +173,21 @@ enum DataManager {
             )
             print("[DataManager] \(items.count) card items retrieved from mocked API.")
             return items
+        }
+        
+        static func getMockedCard() async throws -> Card {
+            guard let url = Bundle.main.url(forResource: "card", withExtension: "json"
+            ) else {
+                throw NetworkError.invalidURL
+            }
+            
+            let data = try Data(contentsOf: url)
+            let card: Card = try JSONDecoder().decode(
+                Card.self,
+                from: data
+            )
+            print("[DataManager] \(card.name ?? "Unknown") card retrieved from mocked API.")
+            return card
         }
     }
 }

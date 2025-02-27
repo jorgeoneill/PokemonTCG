@@ -39,7 +39,7 @@ extension CardDetailView {
         }
 
         var hp: String {
-            String(localized: "hp_label") + ": \(card.hp ?? 0)"
+            "\(card.hp ?? 0) " + String(localized: "hp_label")
         }
 
         var types: String {
