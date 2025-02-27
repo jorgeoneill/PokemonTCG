@@ -13,7 +13,7 @@ enum DataManager {
     
     enum NetworkData {
         // MARK: public methods
-        
+        // Get list of card items
         static func getCardItems() async throws -> [CardListItem] {
             // Step 1: Load cached data first (for instant UI update)
             if let cachedItems = LocalData.loadCardItems() {
@@ -36,6 +36,15 @@ enum DataManager {
             let freshItems = try await fetchCardItems()
             LocalData.cache(cardItems: freshItems)
             return freshItems
+        }
+        // Get single card detail
+        static func getCard(for cardId: String) async throws -> Card {
+            guard let url = endpoint(for: cardId) else {
+                throw NetworkError.invalidURL
+            }
+            
+            let card: Card = try await request(url: url)
+            return card
         }
         
         static func getImage(from url: URL?) async throws -> UIImage {
@@ -65,9 +74,16 @@ enum DataManager {
             guard let url = endpoint() else {
                 throw NetworkError.invalidURL
             }
-            
+
+            let cardItems: [CardListItem] = try await request(url: url)
+            print("[DataManager] \(cardItems.count) card items retrieved from network.")
+            return cardItems
+        }
+        
+        // Generic network data request
+        private static func request<T: Decodable>(url: URL) async throws -> T {
             let (data, response) = try await URLSession.shared.data(from: url)
-            
+
             guard
                 let httpResponse = response as? HTTPURLResponse,
                 (200...299).contains(httpResponse.statusCode)
@@ -75,13 +91,8 @@ enum DataManager {
                 throw NetworkError.invalidServerResponse
             }
             
-            let cardItems: [CardListItem] = try JSONDecoder().decode(
-                [CardListItem].self,
-                from: data
-            )
-            
-            print("[DataManager] \(cardItems.count) card items retrieved from network.")
-            return cardItems
+            let decodedObject = try JSONDecoder().decode(T.self, from: data)
+            return decodedObject
         }
         
         static func fetchImage(from url: URL?) async throws -> UIImage {
@@ -107,13 +118,16 @@ enum DataManager {
         
         
         // MARK: - Enpoint creation
-        static func endpoint() -> URL? {
+        static func endpoint(for cardId: String? = nil) -> URL? {
             var components = URLComponents()
             components.scheme = Constants.API.URL.scheme
             components.host = Constants.API.URL.host
             components.path = Constants.API.URL.path
             let url = components.url
             //print("[DataManager] Fetching cards from: \(String(describing: url))")
+            if let cardId {
+                return url?.appendingPathComponent(cardId)
+            }
             return url
         }
     }
@@ -128,10 +142,10 @@ enum DataManager {
         
         // Save card items to cache
         static func cache(cardItems: [CardListItem]) {
-            if let data = try? JSONEncoder().encode(cardItems) {
-                UserDefaults.standard.setValue(data, forKey: Constants.UserDefaultsKeys.cachedCardItems)
-                print("[DataManager] \(cardItems.count) card items cached.")
-            }
+            guard let data = try? JSONEncoder().encode(cardItems) else { return }
+           
+            UserDefaults.standard.setValue(data, forKey: Constants.UserDefaultsKeys.cachedCardItems)
+            print("[DataManager] \(cardItems.count) card items cached.")
         }
         
         // Helper function to clear image cache if necessary

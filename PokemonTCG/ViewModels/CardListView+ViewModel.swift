@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension MainView {
+extension CardListView {
     final class ViewModel {
         // MARK: - Private properties
         private var allItems: [CardListItem] = []
@@ -16,7 +16,7 @@ extension MainView {
         private var displayedItems: [CardListItem] {
             filteredItems.isEmpty && !isSearching ? allItems : filteredItems
         }
-        var onCardSelected: ((CardListItem) -> Void)?
+        var onCardItemSelected: ((CardListItem) -> Void)?
 
         // MARK: - Public properties
         var numberOfItems: Int {
@@ -33,7 +33,7 @@ extension MainView {
             CardCellView.ViewModel(item: displayedItems[index])
         }
         
-        func card(at index: Int) -> CardListItem? {
+        func cardItem(at index: Int) -> CardListItem? {
             guard index >= 0 && index < numberOfItems else {
                 print("Index \(index) out of bounds for displayedItems array.")
                 return nil
@@ -45,9 +45,7 @@ extension MainView {
             // Uncomment below to use mocked data
             allItems = try await DataManager.NetworkData.getCardItems()
             //allItems = try await DataManager.LocalData.getMockedCardItems()
-            filteredItems = [] // Clear any previous filtering
-
-            // Notify the view that data is updated
+            filteredItems = []
             onDataUpdated?()
         }
         

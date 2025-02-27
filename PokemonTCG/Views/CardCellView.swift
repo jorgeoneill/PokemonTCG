@@ -18,7 +18,7 @@ final class CardCellView: UITableViewCell {
     private let cardNameLabel = UILabel()
 
 
-    // MARK: - Initializer
+    // MARK: - Lifecycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupSubviews()
@@ -38,6 +38,7 @@ final class CardCellView: UITableViewCell {
         containerView.layer.masksToBounds = true
         // Custom background color adapts to light/dark apperances
         containerView.backgroundColor = viewModel.backgroundColor
+    
         
         // Small image view
         self.smallCardImageView.image = nil
@@ -64,29 +65,30 @@ final class CardCellView: UITableViewCell {
 
     // MARK: - Private methods
     private func setupSubviews() {
+        containerView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(containerView)
+        smallCardImageView.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(smallCardImageView)
+        cardNameLabel.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(cardNameLabel)
-
     }
 
     private func setupConstraints() {
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8).isActive = true
-        containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
-        containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8).isActive = true
-        containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8).isActive = true
-        
-        smallCardImageView.translatesAutoresizingMaskIntoConstraints = false
-        smallCardImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
-        smallCardImageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
-        // Slight off-center seems to work best for the intended purpose, which is to display just a glimpse of the card image
-        smallCardImageView.centerYAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 30).isActive = true
-        
-        cardNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        cardNameLabel.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
-        cardNameLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
-        cardNameLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
-        cardNameLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
+        NSLayoutConstraint.activate([
+            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+            
+            smallCardImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            smallCardImageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            // Slight off-center seems to work best for the intended purpose, which is to display just a glimpse of the card image
+            smallCardImageView.centerYAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 30),
+            
+            cardNameLabel.topAnchor.constraint(equalTo: containerView.topAnchor),
+            cardNameLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            cardNameLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            cardNameLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+        ])
     }
 }

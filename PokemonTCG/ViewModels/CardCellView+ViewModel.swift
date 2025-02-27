@@ -22,7 +22,7 @@ extension CardCellView {
             return imageBaseURL?.appendingPathComponent(urlSuffix)
         }
         
-        // MARK: - Public properties
+        // MARK: - Computed properties
         var cellTitle: String {
             item.name
         }

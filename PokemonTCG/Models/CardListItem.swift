@@ -5,7 +5,7 @@
 //  Created by Jorge O'Neill on 23/02/2025.
 //
 
-// Using Codable instead of just Decodable in order to cache Cadrds
+// Using Codable instead of just Decodable to enable caching
 struct CardListItem: Codable {
     let id: String
     let localId: String

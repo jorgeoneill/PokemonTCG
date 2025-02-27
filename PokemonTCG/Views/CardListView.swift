@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  CardListView.swift
 //  PokemonTCG
 //
 //  Created by Jorge O'Neill on 24/02/2025.
@@ -7,14 +7,12 @@
 
 import UIKit
 
-final class MainView: UIView {
-    
+final class CardListView: UIView {
+    // MARK: - Private properties
     private let searchBar = UISearchBar()
     private var tableView = UITableView()
-    
     // Displays a message when the list is empty
     private let emptyListLabel = UILabel()
-    
     private var viewModel: ViewModel
     
     // MARK: - Lifecycle
@@ -40,14 +38,16 @@ final class MainView: UIView {
         // Table view
         tableView.delegate = self
         tableView.dataSource = self
-        // Dismisses the keyboard on scroll, if "Search" button is disabled.
+        // Dismisses the keyboard on scroll, if Search button is disabled.
         tableView.keyboardDismissMode = .onDrag
         tableView.register(CardCellView.self, forCellReuseIdentifier: CardCellView.identifier)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(tableView)
         
         // Search bar
         searchBar.delegate = self
         searchBar.placeholder = viewModel.searchBarPlaceholder
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
         addSubview(searchBar)
         
         // Empty list message
@@ -56,26 +56,27 @@ final class MainView: UIView {
         emptyListLabel.textColor = viewModel.emptyListMessageColor
         emptyListLabel.font = viewModel.emptyListMessageFont
         emptyListLabel.isHidden = true // Initially hidden
+        emptyListLabel.translatesAutoresizingMaskIntoConstraints = false
         addSubview(emptyListLabel)
 
     }
     
     private func setupConstraints() {
-        searchBar.translatesAutoresizingMaskIntoConstraints = false
-        searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
-        searchBar.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        searchBar.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        NSLayoutConstraint.activate([
+            searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            searchBar.leadingAnchor.constraint(equalTo: leadingAnchor),
+            searchBar.trailingAnchor.constraint(equalTo: trailingAnchor),
 
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        
-        emptyListLabel.translatesAutoresizingMaskIntoConstraints = false
-        emptyListLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        emptyListLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        emptyListLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            emptyListLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            emptyListLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            emptyListLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+
+        ])
     }
     
     private func updateView() {
@@ -87,7 +88,7 @@ final class MainView: UIView {
 }
 
 // MARK: - Table view data source methods
-extension MainView: UITableViewDataSource {
+extension CardListView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.numberOfItems
     }
@@ -103,14 +104,18 @@ extension MainView: UITableViewDataSource {
 }
 
 // MARK: Table view delegate methods
-extension MainView: UITableViewDelegate {
+extension CardListView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         Constants.UI.cardCellViewHeight
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let selectedCardItem = viewModel.cardItem(at: indexPath.row) else { return }
+        viewModel.onCardItemSelected?(selectedCardItem)
     }
 }
 
 // MARK: Search bar delegate methods
-extension MainView: UISearchBarDelegate {
+extension CardListView: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel.searchItems(with: searchText)
     }

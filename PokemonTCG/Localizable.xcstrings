@@ -1,12 +1,62 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "attacks_label_no_cost_value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Cost"
+          }
+        }
+      }
+    },
+    "attacks_label_no_effect_value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Effect"
+          }
+        }
+      }
+    },
+    "attacks_label_unknown_attack_value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Attack"
+          }
+        }
+      }
+    },
     "data_unavailable_error_title" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No data available"
+          }
+        }
+      }
+    },
+    "date_label_default_value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown update date"
+          }
+        }
+      }
+    },
+    "description_label_default_value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No description"
           }
         }
       }
@@ -41,12 +91,122 @@
         }
       }
     },
+    "evolves_from_label" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evolves from"
+          }
+        }
+      }
+    },
+    "evolves_from_label_default_value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Evolution"
+          }
+        }
+      }
+    },
+    "hp_label" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HP"
+          }
+        }
+      }
+    },
+    "illustrator_label" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Illustrator"
+          }
+        }
+      }
+    },
+    "illustrator_label_default_value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Illustrator"
+          }
+        }
+      }
+    },
+    "legal_status_label_expanded_value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expanded"
+          }
+        }
+      }
+    },
+    "legal_status_label_none_value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "None"
+          }
+        }
+      }
+    },
+    "legal_status_label_standard_value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standard"
+          }
+        }
+      }
+    },
+    "legalities_label" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legalities"
+          }
+        }
+      }
+    },
     "main_view_empty_list_message" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No cards to display"
+          }
+        }
+      }
+    },
+    "n_a" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N/A"
+          }
+        }
+      }
+    },
+    "navigation_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cards"
           }
         }
       }
@@ -61,12 +221,152 @@
         }
       }
     },
+    "rarity_label" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rarity"
+          }
+        }
+      }
+    },
+    "regulation_mark_label" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regulation Mark"
+          }
+        }
+      }
+    },
+    "regulation_mark_label_default_value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Mark"
+          }
+        }
+      }
+    },
+    "retreat_cost_label" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retreat Cost"
+          }
+        }
+      }
+    },
     "search_placeholder" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Search by name"
+          }
+        }
+      }
+    },
+    "set_label" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set"
+          }
+        }
+      }
+    },
+    "set_label_default_value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Set"
+          }
+        }
+      }
+    },
+    "stage_label" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stage"
+          }
+        }
+      }
+    },
+    "stage_label_default_value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Stage"
+          }
+        }
+      }
+    },
+    "type_label" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type"
+          }
+        }
+      }
+    },
+    "type_label_default_value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Type"
+          }
+        }
+      }
+    },
+    "unknown_card_name" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown card name"
+          }
+        }
+      }
+    },
+    "updated_label" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last updated on"
+          }
+        }
+      }
+    },
+    "weakness_label_no_weakness_value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Weakness value"
+          }
+        }
+      }
+    },
+    "weakness_label_unknown_type_value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Weakness type"
           }
         }
       }
