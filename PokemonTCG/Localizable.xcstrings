@@ -8,6 +8,12 @@
             "state" : "translated",
             "value" : "No Cost"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sem Custo"
+          }
         }
       }
     },
@@ -17,6 +23,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No Effect"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sem Efeito"
           }
         }
       }
@@ -28,6 +40,12 @@
             "state" : "translated",
             "value" : "Unknown Attack"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ataque desconhecido"
+          }
         }
       }
     },
@@ -37,6 +55,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No data available"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dados indisponíveis"
           }
         }
       }
@@ -48,6 +72,12 @@
             "state" : "translated",
             "value" : "Unknown update date"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data de atualização desconhecida"
+          }
         }
       }
     },
@@ -57,6 +87,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No description"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sem descrição"
           }
         }
       }
@@ -68,6 +104,12 @@
             "state" : "translated",
             "value" : "Not able to process image data"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não foi possível processar dados de imagem"
+          }
         }
       }
     },
@@ -77,6 +119,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Invalid response from network server"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resposta do servidor inválida"
           }
         }
       }
@@ -88,6 +136,12 @@
             "state" : "translated",
             "value" : "Invalid URL"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL inválido"
+          }
         }
       }
     },
@@ -97,6 +151,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Evolves from"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evolui de"
           }
         }
       }
@@ -108,6 +168,12 @@
             "state" : "translated",
             "value" : "Unknown Evolution"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evolução desconhecida"
+          }
         }
       }
     },
@@ -117,6 +183,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "HP"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PS"
           }
         }
       }
@@ -128,6 +200,12 @@
             "state" : "translated",
             "value" : "Illustrator"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ilustrador"
+          }
         }
       }
     },
@@ -137,6 +215,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Unknown Illustrator"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ilustrador desconhecido"
           }
         }
       }
@@ -148,6 +232,12 @@
             "state" : "translated",
             "value" : "Expanded"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expandido"
+          }
         }
       }
     },
@@ -158,12 +248,24 @@
             "state" : "translated",
             "value" : "None"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nenhuma"
+          }
         }
       }
     },
     "legal_status_label_standard_value" : {
       "localizations" : {
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standard"
+          }
+        },
+        "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Standard"
@@ -178,6 +280,12 @@
             "state" : "translated",
             "value" : "Legalities"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legalidades"
+          }
         }
       }
     },
@@ -187,6 +295,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No cards to display"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sem cartas disponíveis"
           }
         }
       }
@@ -198,6 +312,12 @@
             "state" : "translated",
             "value" : "N/A"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N/D"
+          }
         }
       }
     },
@@ -208,12 +328,24 @@
             "state" : "translated",
             "value" : "Cards"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cartas"
+          }
         }
       }
     },
     "ok_button" : {
       "localizations" : {
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ok"
+          }
+        },
+        "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ok"
@@ -228,6 +360,12 @@
             "state" : "translated",
             "value" : "Rarity"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raridade"
+          }
         }
       }
     },
@@ -237,6 +375,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Regulation Mark"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marca de Regulação"
           }
         }
       }
@@ -248,6 +392,12 @@
             "state" : "translated",
             "value" : "Unknown Mark"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marca desconhecida"
+          }
         }
       }
     },
@@ -257,6 +407,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Retreat Cost"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custo de Recuo"
           }
         }
       }
@@ -268,6 +424,12 @@
             "state" : "translated",
             "value" : "Search by name"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Procurar por nome"
+          }
         }
       }
     },
@@ -277,6 +439,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Set"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conjunto"
           }
         }
       }
@@ -288,6 +456,12 @@
             "state" : "translated",
             "value" : "Unknown Set"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conjunto desconhecido"
+          }
         }
       }
     },
@@ -297,6 +471,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stage"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estágio"
           }
         }
       }
@@ -308,6 +488,12 @@
             "state" : "translated",
             "value" : "Unknown Stage"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estágio desconhecido"
+          }
         }
       }
     },
@@ -317,6 +503,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Type"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipo"
           }
         }
       }
@@ -328,6 +520,12 @@
             "state" : "translated",
             "value" : "Unknown Type"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipo desconhecido"
+          }
         }
       }
     },
@@ -337,6 +535,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Unknown card name"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nome desconhecido"
           }
         }
       }
@@ -348,6 +552,12 @@
             "state" : "translated",
             "value" : "Last updated on"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atualizado em"
+          }
         }
       }
     },
@@ -358,6 +568,12 @@
             "state" : "translated",
             "value" : "No Weakness value"
           }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sem valor de Fraqueza"
+          }
         }
       }
     },
@@ -367,6 +583,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Unknown Weakness type"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fraqueza desconhecida"
           }
         }
       }
